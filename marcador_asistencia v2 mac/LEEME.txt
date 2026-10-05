@@ -1,0 +1,68 @@
+MARCADOR DE ASISTENCIA  -  Desarrollado por @GabRC
+======================
+
+A) PARA CREAR EL INSTALADOR (una sola vez, en UN equipo Windows con Python)
+   1. Instala Python desde https://www.python.org (marca "Add Python to PATH").
+   2. Doble clic en  construir_instalador.bat
+      (instala lo necesario, incluido Inno Setup, y arma todo solo).
+   3. Al terminar se abre la carpeta Output con:
+        Instalador_MarcadorAsistencia.exe
+   4. Copia ese unico archivo a los demas equipos.
+
+B) PARA INSTALAR EN CADA EQUIPO (no requiere Python ni administrador)
+   1. Doble clic en Instalador_MarcadorAsistencia.exe
+   2. Siguiente > Siguiente > Instalar.
+      Deja marcada la opcion "Iniciar con Windows".
+   3. Se abre el programa: configura pagina, horarios y dias, y pulsa Guardar.
+
+DESINSTALAR
+   - Desde el programa: boton rojo "Desinstalar".
+   - O desde Configuracion de Windows > Aplicaciones > Marcador de asistencia.
+   Se cierra el programa, se quita el inicio con Windows y se borran el
+   programa y la configuracion (%USERPROFILE%\marcador_asistencia.json).
+
+USO DIARIO
+   - Alarma sonora: se activa o desactiva en "Seguridad y alarma" (boton "Probar"
+     para revisar el volumen). Suena hasta que marques o liberes el bloqueo.
+   - La pagina de asistencia se muestra maximizada (pantalla completa).
+   - El boton "Emergencia" abre una ventana centrada, siempre al frente.
+   - Al cerrar la ventana con la X, el programa sigue activo junto al reloj
+     (icono azul con check; si no lo ves, pulsa la flecha ^).
+   - Clic en el icono = abrir configuracion. Clic derecho = Abrir / Salir.
+   - Si la pagina pide usuario y contrasena, deja activado
+     "Permitir todo el navegador".
+   - Si te bloqueas: boton "Emergencia" (tu codigo) o espera el limite de minutos.
+
+MODO DESARROLLO EN WINDOWS (opcional): iniciar.bat ejecuta el programa desde el codigo
+fuente y desinstalar.bat lo quita.
+
+============================================================
+VERSION PARA macOS
+============================================================
+A) PARA CREAR EL INSTALADOR (una sola vez, en UN Mac)
+   1. Instala Python 3 desde https://www.python.org (el instalador oficial
+      incluye Tk; con Homebrew haria falta "brew install python-tk").
+   2. Abre Terminal en esta carpeta y ejecuta:   ./construir_mac.sh
+      (si dice "permiso denegado": chmod +x construir_mac.sh)
+   3. Se crea  Output/Instalador_MarcadorAsistencia_Mac.dmg
+   4. Copia ese .dmg a los demas Mac. Se construye para el tipo de Mac donde
+      lo creas (Apple Silicon o Intel).
+
+B) PARA INSTALAR EN CADA MAC
+   1. Abre el .dmg y arrastra "Marcador de asistencia" a Aplicaciones.
+   2. La PRIMERA vez: clic derecho sobre la app > Abrir > Abrir
+      (la app no esta firmada con cuenta de desarrollador de Apple).
+   3. Permisos: en Ajustes del Sistema > Privacidad y seguridad >
+      Accesibilidad, activa "Marcador de asistencia". Sin ese permiso el
+      programa igual oculta otras apps, pero no puede maximizar la pagina.
+      Si macOS pregunta por controlar "System Events", pulsa Permitir.
+   4. Configura y pulsa Guardar. Deja activado "Iniciar con macOS".
+
+DIFERENCIAS EN macOS
+   - El icono del Dock hace de "bandeja": con la ventana cerrada, un clic en
+     el Dock la vuelve a abrir. Para cerrar del todo: Cmd+Q o "Salir del programa".
+   - El bloqueo funciona por aplicacion: permite el navegador y oculta todo lo demas.
+     La opcion de bloquear por titulo de pestana solo existe en Windows.
+   - Desinstalar: boton rojo "Desinstalar" (borra la app, el inicio
+     automatico y la configuracion) o arrastrar la app a la Papelera.
+   - Modo desarrollo: iniciar_mac.command.

@@ -1,0 +1,4 @@
+customtkinter
+pillow
+pystray; sys_platform == "win32"
+pyobjc-framework-Cocoa; sys_platform == "darwin"

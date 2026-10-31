@@ -1,0 +1,35 @@
+MARCADOR DE ASISTENCIA PARA macOS  -  Desarrollado por @GabRec
+=================================
+
+CREAR EL INSTALADOR (una sola vez, en UN Mac)
+   1. Instala Python 3 desde https://www.python.org (el instalador oficial
+      incluye Tk; con Homebrew haria falta "brew install python-tk").
+   2. Abre Terminal en esta carpeta y ejecuta:   bash construir_mac.sh
+   3. Se crea  Output/Instalador_MarcadorAsistencia_Mac.dmg
+   4. Copia ese .dmg a los demas Mac. Se construye para el tipo de Mac donde
+      lo creas (Apple Silicon o Intel).
+
+INSTALAR EN CADA MAC
+   1. Abre el .dmg y arrastra "Marcador de asistencia" a Aplicaciones.
+   2. La PRIMERA vez: clic derecho sobre la app > Abrir > Abrir
+      (la app no esta firmada con cuenta de desarrollador de Apple).
+   3. Permisos: en Ajustes del Sistema > Privacidad y seguridad >
+      Accesibilidad, activa "Marcador de asistencia". Sin ese permiso el
+      programa igual oculta otras apps, pero no puede maximizar la pagina.
+      Si macOS pregunta por controlar "System Events", pulsa Permitir.
+   4. Configura y pulsa Guardar. Deja activado "Iniciar con macOS".
+
+USO DIARIO
+   - Alarma sonora: se activa o desactiva en "Seguridad y alarma" (boton "Probar"
+     para revisar el volumen). Suena hasta que marques o liberes el bloqueo.
+   - Si te bloqueas: boton "Emergencia" (tu codigo) o espera el limite de minutos.
+
+DIFERENCIAS CON LA VERSION DE WINDOWS
+   - El icono del Dock hace de bandeja: con la ventana cerrada, un clic en
+     el Dock la vuelve a abrir. Para cerrar del todo: Cmd+Q o "Salir del programa".
+   - El bloqueo funciona por aplicacion: permite el navegador y oculta todo lo demas.
+     La opcion de bloquear por titulo de pestana solo existe en Windows.
+   - Desinstalar: boton rojo "Desinstalar" (borra la app, el inicio
+     automatico y la configuracion) o arrastrar la app a la Papelera.
+
+MODO DESARROLLO (opcional): bash iniciar_mac.command

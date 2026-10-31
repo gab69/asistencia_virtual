@@ -9,7 +9,7 @@
 AppId={{B7D1E5C2-4F3A-4C8E-9A61-2D5E7F0A1B34}
 AppName={#NombreApp}
 AppVersion={#Version}
-AppPublisher=@GabRC
+AppPublisher=@GabRec
 DefaultDirName={autopf}\{#NombreApp}
 DisableProgramGroupPage=yes
 PrivilegesRequired=lowest

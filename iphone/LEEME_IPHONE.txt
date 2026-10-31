@@ -1,0 +1,47 @@
+MARCADOR DE ASISTENCIA PARA IPHONE  -  Desarrollado por @GabRec
+==================================
+
+CREAR E INSTALAR LA APP (hace falta un Mac con Xcode 26 o superior)
+   1. Abre MarcadorAsistencia.xcodeproj en Xcode.
+   2. Selecciona el proyecto > pestana "Signing & Capabilities" y elige tu
+      cuenta en "Team". Sirve un Apple ID gratuito.
+      Si Xcode dice que el identificador esta ocupado, cambia
+      "Bundle Identifier" por otro propio.
+   3. Conecta el iPhone, eligelo arriba y pulsa Play (Cmd+R).
+   4. En el iPhone: Ajustes > General > VPN y gestion de dispositivos >
+      confia en tu cuenta. Activa tambien "Modo de desarrollador" si lo pide.
+   Con Apple ID gratuito la app deja de abrir a los 7 dias: hay que volver a
+   instalarla desde Xcode. Con cuenta de pago (99 USD al ano) dura un ano y se
+   puede repartir por TestFlight.
+
+   Pruebas: Cmd+U en Xcode.
+
+PRIMER USO (iOS 17 o superior)
+   1. Acepta las notificaciones y las alarmas.
+   2. Escribe la URL, ajusta horarios y dias, y pulsa Guardar.
+   3. Pulsa "Probar bloqueo" para comprobarlo.
+
+USO DIARIO
+   - iOS 26 o superior: a la hora marcada suena una alarma del sistema, aunque
+     el telefono este en silencio. Pulsa "Abrir" para ir a la pagina.
+   - iOS 17 a 25, o con "Alarma sonora" apagada: llega una notificacion. Toca
+     en ella. En este caso el modo silencio la deja sin sonido.
+   - Al abrir la app aparece el bloqueo con la pagina, el sonido y la vibracion.
+   - "Ya marque" termina el bloqueo. "Emergencia" pide el codigo.
+   - Si sales de la app, llegan avisos cada minuto hasta que vuelvas.
+   - El bloqueo se libera solo al cumplirse el limite de minutos.
+   - No hace falta dejar la app abierta. Sigue activa tras reiniciar el telefono.
+
+DIFERENCIAS CON LAS DEMAS VERSIONES
+   iOS no permite lo siguiente a ninguna app normal:
+   - Abrirse sola a la hora marcada: hay que tocar la alarma o la notificacion.
+   - Impedir que salgas o que uses otras apps: el bloqueo solo ocupa la propia
+     app. "Detener" en la alarma la apaga sin pasar por la pagina.
+   Para quedarte de verdad dentro de la app usa Acceso Guiado:
+   Ajustes > Accesibilidad > Acceso Guiado, y triple clic al boton lateral.
+   Salir y Desinstalar no existen: se borra como cualquier app de iPhone.
+
+SI NO AVISA A LA HORA
+   Revisa en Ajustes > Marcador de asistencia que esten permitidas las
+   notificaciones y las alarmas. Si un modo de concentracion esta activo, las
+   notificaciones (no las alarmas) quedan silenciadas.

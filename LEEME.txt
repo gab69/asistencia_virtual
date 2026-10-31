@@ -1,4 +1,4 @@
-MARCADOR DE ASISTENCIA  -  Desarrollado por @GabRC
+MARCADOR DE ASISTENCIA  -  Desarrollado por @GabRec
 ======================
 
 A) PARA CREAR EL INSTALADOR (una sola vez, en UN equipo Windows con Python)

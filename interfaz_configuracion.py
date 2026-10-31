@@ -14,7 +14,7 @@ COLOR_PELIGRO = "#c62828"
 COLOR_PELIGRO_HOVER = "#8e0000"
 COLOR_NEUTRO = "#555555"
 COLOR_NEUTRO_HOVER = "#3d3d3d"
-CREDITO = "Desarrollado por @GabRC"
+CREDITO = "Desarrollado por @GabRec"
 
 
 @dataclass

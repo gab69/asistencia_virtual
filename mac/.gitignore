@@ -1,0 +1,8 @@
+__pycache__/
+.venv_build/
+build/
+dist/
+Output/
+dmg_tmp/
+*.spec
+icono.icns

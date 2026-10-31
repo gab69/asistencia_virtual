@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Marcador de asistencia</string>
+    <string name="lema">Nunca más olvides marcar tu entrada y salida.</string>
+    <string name="credito">Desarrollado por \@GabRec</string>
+    <string name="seccion_pagina">Página de asistencia</string>
+    <string name="direccion_url">Dirección (URL)</string>
+    <string name="permitir_navegador">Permitir otros sitios</string>
+    <string name="nota_navegador">Déjalo activo si la página te lleva a otro sitio para iniciar sesión.</string>
+    <string name="seccion_horarios">Horarios de marcación</string>
+    <string name="seccion_dias">Días laborales</string>
+    <string name="seccion_seguridad">Seguridad y alarma</string>
+    <string name="alarma_sonora">Alarma sonora</string>
+    <string name="vibracion">Vibración</string>
+    <string name="probar_sonido">Probar sonido</string>
+    <string name="liberar_tras">Liberar automáticamente tras</string>
+    <string name="minutos">%d min</string>
+    <string name="codigo_emergencia">Código de emergencia</string>
+    <string name="guardar">Guardar</string>
+    <string name="probar_bloqueo">Probar bloqueo</string>
+    <string name="prueba">Prueba</string>
+    <string name="guardado">Configuración guardada.</string>
+    <string name="guardado_proxima">Guardado. Próxima: %1$s, %2$s</string>
+    <string name="error_url">Escribe una dirección que empiece con http:// o https://</string>
+    <string name="error_dias">Selecciona al menos un día laboral.</string>
+    <string name="error_codigo">Define un código de emergencia.</string>
+    <string name="conceder">Conceder</string>
+    <string name="permiso_notificaciones">Permite las notificaciones para que el bloqueo aparezca a la hora de marcar.</string>
+    <string name="permiso_superposicion">Permite mostrar sobre otras apps para que el bloqueo aparezca y no puedas salir de él.</string>
+    <string name="permiso_pantalla_completa">Permite las alertas de pantalla completa para que el bloqueo aparezca con el teléfono bloqueado.</string>
+    <string name="marca_tu">Marca tu %s ahora</string>
+    <string name="ya_marque">Ya marqué</string>
+    <string name="emergencia">Emergencia</string>
+    <string name="ingresa_codigo">Ingresa tu código para salir del bloqueo.</string>
+    <string name="codigo_incorrecto">Código incorrecto. Inténtalo de nuevo.</string>
+    <string name="elegir_hora">Elige la hora</string>
+    <string name="horas">Horas</string>
+    <string name="minutos_etiqueta">Minutos</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="desbloquear">Desbloquear</string>
+    <string name="pagina_no_permitida">Solo puedes usar la página de asistencia.</string>
+    <string name="canal_bloqueo">Bloqueo de asistencia</string>
+    <string name="canal_bloqueo_silencioso">Bloqueo en curso</string>
+    <string name="notificacion_detalle">Toca para abrir la página de asistencia.</string>
+</resources>

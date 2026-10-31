@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/FilaTarjeta">
+
+    <TextView
+        android:id="@+id/nombre"
+        style="@style/TextoFila" />
+
+    <Button
+        android:id="@+id/hora"
+        style="@style/BotonValor"
+        android:layout_marginEnd="8dp" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/activa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

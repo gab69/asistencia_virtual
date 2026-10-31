@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/raiz"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/texto"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/Nota"
+                android:text="@string/lema" />
+
+            <TextView
+                style="@style/Nota"
+                android:layout_marginBottom="14dp"
+                android:text="@string/credito"
+                android:textStyle="italic" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/tarjeta_permiso"
+                style="@style/Tarjeta"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/aviso">
+
+                <LinearLayout style="@style/ContenidoTarjeta">
+
+                    <TextView
+                        android:id="@+id/texto_permiso"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/texto"
+                        android:textSize="13sp" />
+
+                    <Button
+                        android:id="@+id/boton_permiso"
+                        style="@style/Widget.Material3.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:text="@string/conceder" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView style="@style/Tarjeta">
+
+                <LinearLayout style="@style/ContenidoTarjeta">
+
+                    <TextView
+                        style="@style/TituloTarjeta"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/seccion_pagina" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/direccion_url">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/campo_url"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textUri"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout style="@style/FilaTarjeta">
+
+                        <TextView
+                            style="@style/TextoFila"
+                            android:text="@string/permitir_navegador" />
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/interruptor_navegador"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/permitir_navegador" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/Nota"
+                        android:text="@string/nota_navegador" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView style="@style/Tarjeta">
+
+                <LinearLayout style="@style/ContenidoTarjeta">
+
+                    <TextView
+                        style="@style/TituloTarjeta"
+                        android:layout_marginBottom="4dp"
+                        android:text="@string/seccion_horarios" />
+
+                    <LinearLayout
+                        android:id="@+id/lista_horarios"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView style="@style/Tarjeta">
+
+                <LinearLayout style="@style/ContenidoTarjeta">
+
+                    <TextView
+                        style="@style/TituloTarjeta"
+                        android:layout_marginBottom="6dp"
+                        android:text="@string/seccion_dias" />
+
+                    <LinearLayout
+                        android:id="@+id/fila_dias"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView style="@style/Tarjeta">
+
+                <LinearLayout style="@style/ContenidoTarjeta">
+
+                    <TextView
+                        style="@style/TituloTarjeta"
+                        android:text="@string/seccion_seguridad" />
+
+                    <LinearLayout style="@style/FilaTarjeta">
+
+                        <TextView
+                            style="@style/TextoFila"
+                            android:text="@string/alarma_sonora" />
+
+                        <Button
+                            android:id="@+id/boton_probar_sonido"
+                            style="@style/Widget.Material3.Button.IconButton"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginEnd="4dp"
+                            android:contentDescription="@string/probar_sonido"
+                            android:tooltipText="@string/probar_sonido"
+                            app:icon="@drawable/ic_volumen" />
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/interruptor_alarma"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/alarma_sonora" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/FilaTarjeta">
+
+                        <TextView
+                            style="@style/TextoFila"
+                            android:text="@string/vibracion" />
+
+                        <com.google.android.material.materialswitch.MaterialSwitch
+                            android:id="@+id/interruptor_vibracion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/vibracion" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/FilaTarjeta"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            style="@style/TextoFila"
+                            android:text="@string/liberar_tras" />
+
+                        <Button
+                            android:id="@+id/boton_limite"
+                            style="@style/BotonValor" />
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/codigo_emergencia"
+                        app:endIconMode="password_toggle">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/campo_codigo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/barra_acciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tarjeta"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="6dp">
+
+        <Button
+            android:id="@+id/boton_probar"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/probar_bloqueo" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/boton_guardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/azul"
+            android:text="@string/guardar"
+            android:textColor="@color/blanco" />
+    </LinearLayout>
+</LinearLayout>

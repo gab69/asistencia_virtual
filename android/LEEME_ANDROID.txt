@@ -1,0 +1,44 @@
+MARCADOR DE ASISTENCIA PARA ANDROID  -  Desarrollado por @GabRec
+===================================
+
+CREAR EL APK (en un equipo con Android Studio)
+   cd android
+   gradlew assembleDebug
+   El archivo queda en app\build\outputs\apk\debug\app-debug.apk
+   Requiere Java 17 o superior (sirve el que trae Android Studio).
+
+INSTALAR EN EL TELEFONO (Android 8.1 o superior)
+   1. Copia el APK al telefono y abrelo. Acepta instalar desde esa fuente.
+   2. Escribe la URL, ajusta horarios y dias, y pulsa Guardar.
+   3. Si aparece la tarjeta amarilla, pulsa Conceder hasta que desaparezca.
+   4. Pulsa "Probar bloqueo" para comprobarlo.
+
+USO DIARIO
+   - A la hora marcada suena la alarma y se abre la pagina dentro de la app.
+   - La alarma y la vibracion se activan o desactivan por separado.
+   - "Ya marque" termina el bloqueo. El candado pide el codigo de emergencia.
+   - Si sales con Inicio o Recientes, el bloqueo vuelve en un segundo.
+   - El bloqueo se libera solo al cumplirse el limite de minutos.
+   - La app no necesita quedar abierta y sigue activa tras reiniciar el telefono.
+
+DIFERENCIAS CON LA VERSION DE ESCRITORIO
+   - Android no deja minimizar otras apps: la pagina se abre dentro de la app.
+   - "Palabras del titulo" se reemplaza por "Permitir otros sitios". Apagado,
+     solo se navega dentro del dominio de la URL configurada.
+   - Salir y Desinstalar no existen: se desinstala como cualquier app de Android.
+   - El inicio automatico siempre esta activo.
+
+SI NO APARECE A LA HORA
+   Algunas marcas (Xiaomi, Huawei, Oppo...) cierran apps en segundo plano.
+   En Ajustes > Bateria, marca esta app como "Sin restricciones".
+
+Vibración
+- Causa probable: el código y el interruptor estaban bien, porquaba al servicio. Lo que sospecho es que el teléfono ignoraba ocortaba la vibración continua, que se pedía una sola vez.
+- Arreglo: ahora vibra con pulsos de medio segundo, uno por segundo. Si el sistema corta uno, el siguiente la retoma.
+
+Para probarlo
+1. Instala android\app\build\outputs\apk\debug\app-debug.apk encdle reemplazó tu asistencia.apk en esa carpeta, así que usa estearchivo.
+2. Pulsa «Probar bloqueo».
+3. Si sigue sin vibrar, revisa en Ajustes del teléfono la opción Vibración de alarma, en «Sonido y vibración» o «Vibración y háptica». La app vibra como alarma, así que esa opción puede anularla aunque el interruptor de la app esté activo.
+
+Si con eso tampoco vibra, conecta el teléfono por USB con la depuración activada y podré ver en sus registros qué la está bloqueando.
